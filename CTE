@@ -1,6 +1,6 @@
 # Here is a query that shows the top 10 customers for Rockbuster in terms of customer numbers:
 
-SELECT D.country,
+## SELECT D.country,
        COUNT(customer_id) AS count_of_customers
 FROM customer A
 INNER JOIN address B ON A.address_id = B.address_id
@@ -13,7 +13,7 @@ LIMIT 10;
 
 # Here is a query finding the top 5 customers in the top 10 cities who have paid the highest total amounts to Rockbuster
 
-SELECT  A.customer_id, B.first_name, B.last_name, E.country, D.city,
+## SELECT  A.customer_id, B.first_name, B.last_name, E.country, D.city,
  Sum(A.amount) as Total_Payment_Amount    
 FROM payment A
 INNER JOIN customer B ON A.customer_id = B.customer_id
@@ -29,7 +29,7 @@ LIMIT 5;
 
 # Here is a query findingt he average amount paid by these top 5 customers
 
-select avg(total_payment_amount) as "average"
+## Select avg(total_payment_amount) as "average"
 from
 (select a.customer_id, b.first_name, b.last_name, e.country, d.city,
 sum(a.amount) as total_payment_amount
@@ -46,7 +46,7 @@ order by total_payment_amount DESC
 
 # Here is a query finding out how many of the top 5 customers are based in each country
 
-SELECT D.country, 
+## SELECT D.country, 
 count(A.customer_id) as "All Customer Count",
 count(top_customer_count) as "top_customer_count"
 FROM customer A 
