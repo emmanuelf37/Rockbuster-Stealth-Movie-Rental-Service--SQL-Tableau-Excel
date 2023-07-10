@@ -27,7 +27,7 @@ ORDER BY total_payment_amount DESC
 LIMIT 5; 
 
 
-# Here is a query findingt he average amount paid by these top 5 customers
+# Here is a query finding the average amount paid by these top 5 customers
 
 ## Select avg(total_payment_amount) as "average"
 from
