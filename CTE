@@ -1,6 +1,7 @@
 # Here is a query that shows the top 10 customers for Rockbuster in terms of customer numbers:
 
-```
+```python
+
 SELECT D.country,
        COUNT(customer_id) AS count_of_customers
 FROM customer A
@@ -10,6 +11,7 @@ INNER JOIN country D ON C.country_ID = D.country_ID
 GROUP BY country
 ORDER BY count_of_customers DESC
 LIMIT 10;
+
 ```
 
 # Here is a query finding the top 5 customers in the top 10 cities who have paid the highest total amounts to Rockbuster
